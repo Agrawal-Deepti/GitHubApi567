@@ -61,7 +61,7 @@ def getGitHubReposAndCommitsForAUser(githubID):
     userRepos = getGithubRepos(githubID)
     for repo in userRepos:
         commitCount = getGithubRepoCommits(githubID,repo)
-        commitsPerRepo.append(f'Repo: {repo} Number of commits: {commitCount}')
+        commitsPerRepo.append('Repo: '+repo+' Number of commits: '+str(commitCount))
         #print(f'Repo: {repo} Number of commits: {commitCount}')
     return commitsPerRepo
 

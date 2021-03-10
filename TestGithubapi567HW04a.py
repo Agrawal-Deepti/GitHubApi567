@@ -80,10 +80,6 @@ class TestGithubapi567HW04a(unittest.TestCase):
         time.sleep(5)
         self.assertRaises(Exception,'Github user not found' ,getGithubRepoCommits, None, None)
 
-    def test_GetGithubRepoCommits_SizeIs0WhenRepoNotFound(self):
-        time.sleep(5)
-        self.assertEqual(getGithubRepoCommits('sdfsdf','hellogitworld'), 0)
-
     def test_getGitHubReposAndCommitsForAUser_returningResponseOfTypeList(self): 
         time.sleep(5)
         self.assertIsInstance(getGitHubReposAndCommitsForAUser('richkempinski'), list)
